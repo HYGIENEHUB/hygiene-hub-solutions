@@ -1,6 +1,9 @@
+
 "use client";
+
 import { motion } from "framer-motion";
 import { ShoppingBag, Star } from "lucide-react";
+
 export default function HygieneHubSolutions() {
   const products = [
     { name: "Luxury Body Cream", price: "R250", rating: 5 },
@@ -8,17 +11,21 @@ export default function HygieneHubSolutions() {
     { name: "Matte Lip Gloss Set", price: "R300", rating: 5 },
     { name: "Curly Human Hair Weave", price: "R1500", rating: 5 }
   ];
+
   return (
     <div style={{ backgroundColor: "black", color: "white", minHeight: "100vh", padding: "40px" }}>
       <h1 style={{ color: "#059669", fontSize: "28px", fontWeight: "bold" }}>
         HYGIENE HUB SOLUTIONS
       </h1>
+
       <h2 style={{ fontSize: "42px", marginTop: "40px" }}>
         Elevating Hygiene Standards<br />With Confidence
       </h2>
+
       <p style={{ marginTop: "16px", color: "#9ca3af" }}>
         Premium cosmetics and beauty essentials for women.
       </p>
+
       <div style={{ marginTop: "60px" }}>
         <h3 style={{ fontSize: "28px", marginBottom: "20px" }}>Best Sellers</h3>
         {products.map((p, i) => (
@@ -27,6 +34,7 @@ export default function HygieneHubSolutions() {
           </div>
         ))}
       </div>
+
       <a
         href="https://wa.me/27714797830"
         style={{
