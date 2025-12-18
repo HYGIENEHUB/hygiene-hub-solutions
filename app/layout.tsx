@@ -1,4 +1,3 @@
-
 export const metadata = {
   title: "HYGIENE HUB SOLUTIONS",
   description: "Elevating Hygiene Standards with Confidence"
