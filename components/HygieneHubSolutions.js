@@ -1,105 +1,56 @@
-import { ShoppingBag, Star } from "lucide-react";
-
 export default function HygieneHubSolutions() {
+
   const products = [
     {
-      name: "Luxury Lipstick",
-      price: "R149",
-      image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa",
-      rating: 5,
+      name: "Healing Facial Cleanser – Moringa & Hemp Oil",
+      price: "R250",
+      image: "/moringa-cleanser.png",
+      message: "Hello Hygiene Hub Solutions, I would like to order: Healing Facial Cleanser – Moringa & Hemp Oil (R250)"
     },
     {
-      name: "Silky Hair Extensions",
-      price: "R799",
-      image: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519",
-      rating: 4,
+      name: "Toner for Clear & Glowing Skin – Licorice Root & Niacinamide",
+      price: "R230",
+      image: "/licorice-toner.png",
+      message: "Hello Hygiene Hub Solutions, I would like to order: Toner for Clear & Glowing Skin – Licorice Root & Niacinamide (R230)"
     },
     {
-      name: "Radiant Face Serum",
-      price: "R299",
-      image: "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd",
-      rating: 5,
-    },
-    {
-      name: "Hydrating Face Cream",
-      price: "R180",
-      image: "https://images.unsplash.com/photo-1612817159949-195b6eb9e31a",
-      rating: 5,
-    },
+      name: "Skin Lightening Foaming Facial Cleanser – Kojic Acid & Niacinamide",
+      price: "R250",
+      image: "/kojic-cleanser.png",
+      message: "Hello Hygiene Hub Solutions, I would like to order: Skin Lightening Foaming Facial Cleanser – Kojic Acid & Niacinamide (R250)"
+    }
   ];
 
   return (
-    <div style={{ background: "#000", color: "#fff", minHeight: "100vh", padding: "40px" }}>
-      <h1 style={{ color: "#059669", fontSize: "28px", fontWeight: "bold" }}>
-        HYGIENE HUB SOLUTIONS
-      </h1>
-
-      <h2 style={{ fontSize: "42px", marginTop: "30px" }}>
-        Elevating Hygiene Standards <br />
-        <span style={{ color: "#059669" }}>With Confidence</span>
+    <div style={{ background:"#000", color:"#fff", minHeight:"100vh", padding:"40px" }}>
+      <h1 style={{ color:"#10b981", fontSize:"30px", fontWeight:"bold" }}>HYGIENE HUB SOLUTIONS</h1>
+      <h2 style={{ fontSize:"40px", marginTop:"20px" }}>
+        SKINCARE COLLECTION<br/>
+        <span style={{ color:"#10b981" }}>ORDER VIA WHATSAPP</span>
       </h2>
 
-      <p style={{ color: "#ccc", marginTop: "15px" }}>
-        Luxury beauty & hygiene essentials for women
-      </p>
-
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-          gap: "20px",
-          marginTop: "50px",
-        }}
-      >
-        {products.map((product, index) => (
-          <div
-            key={index}
-            style={{
-              background: "#111",
-              borderRadius: "20px",
-              padding: "15px",
-              border: "1px solid #064e3b",
-            }}
-          >
-            <img
-              src={product.image}
-              alt={product.name}
+      <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(240px,1fr))", gap:"25px", marginTop:"40px" }}>
+        {products.map((p,i)=>(
+          <div key={i} style={{ background:"#111", borderRadius:"20px", padding:"15px", border:"1px solid #064e3b" }}>
+            <img src={p.image} style={{ width:"100%", height:"220px", objectFit:"cover", borderRadius:"15px" }} />
+            <h3 style={{ marginTop:"12px" }}>{p.name}</h3>
+            <p style={{ color:"#10b981", fontWeight:"bold" }}>{p.price}</p>
+            <a
+              href={`https://wa.me/27714797830?text=${encodeURIComponent(p.message)}`}
+              target="_blank"
               style={{
-                width: "100%",
-                height: "200px",
-                objectFit: "cover",
-                borderRadius: "15px",
-              }}
-            />
-
-            <h3 style={{ marginTop: "12px" }}>{product.name}</h3>
-
-            <div>
-              {Array(product.rating)
-                .fill(0)
-                .map((_, i) => (
-                  <Star key={i} size={16} color="#10b981" fill="#10b981" />
-                ))}
-            </div>
-
-            <p style={{ color: "#10b981", fontWeight: "bold" }}>
-              {product.price}
-            </p>
-
-            <button
-              style={{
-                marginTop: "10px",
-                width: "100%",
-                padding: "10px",
-                background: "#059669",
-                border: "none",
-                borderRadius: "20px",
-                color: "#fff",
-                cursor: "pointer",
+                display:"block",
+                marginTop:"10px",
+                background:"#10b981",
+                color:"#fff",
+                padding:"10px",
+                textAlign:"center",
+                borderRadius:"20px",
+                textDecoration:"none"
               }}
             >
-              <ShoppingBag size={16} /> Add to Cart
-            </button>
+              ORDER ON WHATSAPP
+            </a>
           </div>
         ))}
       </div>
