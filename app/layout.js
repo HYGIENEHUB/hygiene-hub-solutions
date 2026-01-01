@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "HYGIENE HUB SOLUTIONS",
-  description: "ELEVATING HYGIENE STANDARDS WITH CONFIDENCE",
+  title: "Hygiene Hub Solutions",
+  description: "Elevating Hygiene Standards with Confidence"
 };
 
 export default function RootLayout({ children }) {
